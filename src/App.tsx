@@ -4,9 +4,10 @@ import { Theme, lightTheme, darkTheme } from './theme';
 import Header from './components/Header';
 import ColorContainer from './components/ColorContainer';
 import Color from './components/Color';
+import ThemeToggle from './components/ThemeToggle';
 
 export default function App() {
-    const [theme] = useColorTheme();
+    const [theme, setTheme] = useColorTheme();
     const colors = theme === 'light' ? lightTheme : darkTheme;
 
     return <div className='app' style={createStyle(colors)}>
@@ -18,6 +19,7 @@ export default function App() {
                 ))
             }
         </ColorContainer>
+        <ThemeToggle theme={theme} setTheme={setTheme} />
     </div>;
 }
 
@@ -34,6 +36,9 @@ function createStyle(colors: Theme): CSSProperties {
         color: colors.text,
         width: '100vw',
         minHeight: '100vh',
-        fontFamily: 'Droid Sans Mono, "monospace", monospace'
+        fontFamily: 'Droid Sans Mono, "monospace", monospace',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     } as CSSProperties;
 }

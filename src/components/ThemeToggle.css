@@ -1,0 +1,15 @@
+.theme-toggle {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: var(--surface-variant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.theme-toggle:hover {
+    opacity: 0.5;
+}

@@ -3,8 +3,8 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
 
-type RawColorTheme = 'light' | 'dark' | 'system';
-type ColorTheme = 'light' | 'dark';
+export type RawColorTheme = 'light' | 'dark' | 'system';
+export type ColorTheme = 'light' | 'dark';
 
 export function useColorTheme(defaultTheme: RawColorTheme = 'system') {
 
