@@ -1,17 +1,7 @@
-import { CSSProperties } from "react";
+import './ColorContainer.css';
 
 export default function ColorContainer({ children }: { children: React.ReactNode }) {
-    return <div className='color-container' style={createStyle()}>
+    return <div className='color-container'>
         {children}
     </div>;
-}
-
-function createStyle(): CSSProperties {
-    return {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        padding: '100px',
-    };
 }
